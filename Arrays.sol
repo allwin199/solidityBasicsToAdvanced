@@ -30,7 +30,7 @@ contract SimpleStorage {
     // If we have a array like
     uint256[] listOfFavouriteNumbers;
 
-    To rest this array,
+    // To rest this array,
     uint256[] listOfFavouriteNumbers = new uint256[](0)
     // creates a new dynamic array of type uint256[] with an initial length of 0
    
