@@ -49,6 +49,6 @@ contract SimpleStorage {
 
 // calldata is almost same as memory but one main difference is
 // if we said calldata _name, we cannot change the varibale,
-// for eg if we want add ! for each name, this cannot be done in calldata
+// for eg if we want add "!" for each name, this cannot be done in calldata
 // because it is read only
 // but if you mention it as memory, then we are allowed to modify it.
