@@ -11,6 +11,10 @@ contract Functions {
     function retrieveFavouriteNumber() public view returns(uint256){
         return favouriteNumber;
     }
+
+    function returnFive() public pure returns(uint256){
+        return 5;
+    }
 }
 
 
