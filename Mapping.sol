@@ -10,7 +10,8 @@ contract SimpleStorage {
     }
 
     Person[] public listOfPeople;
-    mapping(string => uint256) public favOfPeople;
+    mapping(string name => uint256 favouriteNumber) public favOfPeople;
+    // in mapping default value for all the keys is 0
 
     function addPerson(string memory _name,uint256 _favouriteNumber) public {
         listOfPeople.push(Person(_favouriteNumber, _name));
