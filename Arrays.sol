@@ -1,22 +1,32 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
-// contract is basically similar to Class in JS
+// contract is similar to Class in JS
 contract SimpleStorage {
     uint256 myFavouriteNumber;
 
     // uint256[] listOfFavouriteNumbers;
 
+    // we are creating a custom structure using struct
     struct Person {
         uint256 favouriteNumber;
         string name;
     }
 
+    // Person newPerson = Person({favouriteNumber: 12, name: "Tom"})
+    // Since we are using a custom type, before assigning we have to typecast it to Person type
+
+    // This is an array of type "Person"
     Person[] public listOfPeople;
 
+    // To a new item inside the array
     function addPerson(string memory _name,uint256 _favouriteNumber) public {
-        listOfPeople.push(Person(_favouriteNumber, _name));
+        listOfPeople.push(Person({favouriteNumber: _favouriteNumber, name: _name}));
     }
+
+    // Since the Person[] is public we can access the elements using indices
+    // but we cannot access using names
+    // to access using name we have to use mapping
 
     function store(uint256 _favouriteNumber) public {
         myFavouriteNumber = _favouriteNumber;
