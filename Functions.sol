@@ -25,6 +25,7 @@ contract Functions {
 // external: only visible externally (only for functions) - i.e. can only be message-called (via this.func)
 
 // internal: only visible internally
+// If visibility is not mentioned explicitly "internal" will be assigned.
 
 
 // Modifiers
@@ -32,6 +33,9 @@ contract Functions {
 // pure for functions: Disallows modification or access of state.
 
 // view for functions: Disallows modification of state.
+
+// When using the "view" function we don't spend gas because we are not modifying the state of the blockchain.
+// If the "view" function is called within a function that modifies the state of the blockchain gas will be calculated for this view fn.
 
 // payable for functions: Allows them to receive Ether together with a call.
 
