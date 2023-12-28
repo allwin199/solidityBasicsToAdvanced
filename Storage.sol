@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
-// contract is basically similar to Class in JS
+// contract is similar to Class in JS
 contract SimpleStorage {
+    // myFavouriteNumber is initialized to 0.
     uint256 myFavouriteNumber;
 
     struct Person {
@@ -13,7 +14,7 @@ contract SimpleStorage {
     Person[] public listOfPeople;
 
     function addPerson(string memory _name,uint256 _favouriteNumber) public {
-        listOfPeople.push(Person(_favouriteNumber, _name));
+        listOfPeople.push(Person({favouriteNumber: _favouriteNumber, name: _name}));
     }
 
     function store(uint256 _favouriteNumber) public {
