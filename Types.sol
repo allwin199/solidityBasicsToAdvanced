@@ -1,17 +1,17 @@
 //SPDX-License-Identifier: MIT
 
 //Version of the solidity
-pragma solidity ^0.8.7;
+pragma solidity 0.8.18;
 
 //contract is similar to class in oops
 contract SimpleStorage {
     // boolean
     bool hasFavouriteNumber = true;
 
-    // uint
+    // uint -> unsigned integer(only positive whole number)
     uint256 favouriteNumber = 5;
 
-    // int
+    // int -> signed integer(both positive and negative whole number)
     int256 favouriteInt = -5;
 
     // string
