@@ -1,11 +1,12 @@
-# SolidityBasics
+# Solidity Basics To Advanced
 
-A collection of basic Solidity types for learning purposes.
-
-1. Types.sol
-2. Functions.sol
-3. Arrays.sol
-4. Storage.sol
-5. Mapping.sol
+1. Types
+2. Functions
+3. Arrays
+4. Storage
+5. Mapping
+6. EVM
+7. CallAnything
+8. Encoding
 
 
