@@ -30,7 +30,7 @@ When we deploy a contract.
 # Function Calls
 
 -   When we make a function call to the deployed contract
--   `data` field will be populated with function's `MethodId`
+-   `data` field will be populated with function's `MethodId` and `params`
 -   By seeing the `methodId` EVM knows which method to call
 
 ![Function Call](./Advanced/images/6-function-call.png)
