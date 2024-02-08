@@ -6,7 +6,8 @@ pragma solidity 0.8.20;
 contract Encoding {
     // Concatenating 2 string using abi.encodePacked()
     function combineStrings() public pure returns (string memory) {
-        return (string(abi.encodePacked("Hello, World ", "Let's Code")));
+        string memory stringValue = string(abi.encodePacked("Hello, World ", "Let's Code"));
+        return stringValue;
 
         // "Hello, world" and "Let's Code" are 2 different strings
         // when we are doing abi.encodePacked();
@@ -20,7 +21,8 @@ contract Encoding {
 
     // Concatenating 2 string using string.concat()
     function concateneateStrings() public pure returns (string memory) {
-        return string.concat("Hello, world ", "Let's Focus");
+        string memory stringValue = string.concat("Hello, world ", "Let's Focus");
+        return stringValue;
 
         // Other way to concatenate strings is using string.concat()
         // o/p => Hello, World Let's Focus
@@ -51,14 +53,16 @@ contract Encoding {
 
     // let's encode a number
     function encodeNumber() public pure returns (bytes memory) {
-        return abi.encode(1);
+        bytes memory number = abi.encode(1);
+        return number;
 
         // o/p => 0x0000000000000000000000000000000000000000000000000000000000000001
     }
 
     // let's encode a string
     function encodeString() public pure returns (bytes memory) {
-        return abi.encode("Sample String");
+        bytes memory stringInBytes = abi.encode("Sample String");
+        return stringInBytes;
 
         // o/p => 0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000d53616d706c6520537472696e6700000000000000000000000000000000000000
         // encode() will padded with many zeros
@@ -70,7 +74,9 @@ contract Encoding {
     // This is great if you want to save space, not good for calling functions.
     // You can sort of think of it as a compressor for the massive bytes object above.
     function encodeStringUsingPacked() public pure returns (bytes memory) {
-        return abi.encodePacked("Sample String");
+        bytes memory data = abi.encodePacked("Sample String");
+
+        return data;
 
         // o/p => 0x53616d706c6520537472696e67
     }
@@ -79,7 +85,8 @@ contract Encoding {
     // we can also covert string to bytes by using bytes("string")
     // It's slightly different from above, and they have different gas costs
     function encodeStringBytes() public pure returns (bytes memory) {
-        return bytes("Sample String");
+        bytes memory stringInByes = bytes("Sample String");
+        return stringInByes;
 
         // o/p => 0x53616d706c6520537472696e67
     }
