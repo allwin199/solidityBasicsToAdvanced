@@ -44,6 +44,9 @@ contract CallAnything {
 
         // o/p => 0x9d61d234
     }
+    // bytes("transfer(address,uint256)") => function name and args are converted to bytes
+    // then it is hashed using keccack256
+    // then it is converted into bytes4
 
     function getDataToCallTransfer(address someAddress, uint256 amount) public pure returns (bytes memory) {
         // since we already have the selector
