@@ -3,7 +3,8 @@ pragma solidity 0.8.20;
 
 contract Decoding {
     function encodeString() public pure returns (bytes memory) {
-        return abi.encode("Sample String");
+        bytes memory someString = abi.encode("Sample String");
+        return someString;
     }
 
     function decodeString() public pure returns (string memory) {
@@ -15,16 +16,19 @@ contract Decoding {
 
     // let's multiencode and multidecode
     function multiEncodeString() public pure returns (bytes memory) {
-        return abi.encode("Sample Strings", "But More");
+        bytes memory stringVal = abi.encode("Sample Strings", "But More");
+        return stringVal;
     }
 
     function multiDecodeString() public pure returns (string memory, string memory) {
-        return abi.decode(multiEncodeString(), (string, string));
+        (string memory someString, string memory someOtherString) = abi.decode(multiEncodeString(), (string, string));
+        return (someString, someOtherString);
     }
 
     // we can also multiEncode using abi.encodePacked()
     function multiEncodePackedString() public pure returns (bytes memory) {
-        return abi.encodePacked("Sample Strings ", "But More");
+        bytes memory stringVal = abi.encodePacked("Sample Strings ", "But More");
+        return stringVal;
 
         // o/p => 0x53616d706c6520537472696e6773427574204d6f7265
     }
