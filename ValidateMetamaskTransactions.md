@@ -8,6 +8,9 @@
 ```sh
 cast sig "functionName("args1", "args2")"
 ```
+- It will output the function selector.
+- In the calldata, we can check whether this is the function selector being called
+- function selector will be at the start of the calldata
 
 3. decode the calldata
 
@@ -19,4 +22,5 @@ It will print out
 args1 = ........  
 args2 = ........
 
+- we can check whether this is the right args.
 ---
