@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: SEE LICENSE IN LICENSE
-pragma solidity 0.8.20;
+pragma solidity ^0.8.20;
 
 contract Decoding {
     function encodeString() public pure returns (bytes memory) {
@@ -9,7 +9,10 @@ contract Decoding {
 
     function decodeString() public pure returns (string memory) {
         string memory decodedString = abi.decode(encodeString(), (string));
-        // we want this to be decoded into strings. So we have to explicitly mention them
+        // abi.decode takes the 1st param which is the "encodedData"
+        // seconds params which is the tuple() in which it takes the set of types, we want the data to be decoded
+        // In this example we have encodedData which is a string and
+        // we want this to be decoded into string. 
 
         return decodedString;
     }
