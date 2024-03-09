@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.20;
+pragma solidity ^0.8.20;
 
 // For the cheatsheet, check out the docs: https://docs.soliditylang.org/en/v0.8.13/cheatsheet.html?highlight=encodewithsignature
 
 contract Encoding {
     // Concatenating 2 string using abi.encodePacked()
     function combineStrings() public pure returns (string memory) {
-        string memory stringValue = string(abi.encodePacked("Hello, World ", "Let's Code"));
+        string memory stringValue = string(abi.encodePacked("Hello, World! ", "Let's Code"));
         return stringValue;
 
         // "Hello, world" and "Let's Code" are 2 different strings
@@ -19,6 +19,7 @@ contract Encoding {
         // By following the above steps we have concatenated 2 strings
     }
 
+    // In solidity 0.8.12+ below method can be used to concatenate 2 strings
     // Concatenating 2 string using string.concat()
     function concateneateStrings() public pure returns (string memory) {
         string memory stringValue = string.concat("Hello, world ", "Let's Focus");
@@ -73,6 +74,7 @@ contract Encoding {
     //let's encode a string using abi.encodePacked()
     // This is great if you want to save space, not good for calling functions.
     // You can sort of think of it as a compressor for the massive bytes object above.
+    // Using encodePacked will save lot more gas, because it uses less space
     function encodeStringUsingPacked() public pure returns (bytes memory) {
         bytes memory data = abi.encodePacked("Sample String");
 
