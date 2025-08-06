@@ -10,9 +10,13 @@ contract SimpleStorage {
 
     // uint -> unsigned integer(only positive whole number)
     uint256 favouriteNumber = 5;
+    // favouriteNumber will have max of 256 bits (1byte = 8bits)
+    // 256/8 = 32
 
     // int -> signed integer(both positive and negative whole number)
     int256 favouriteInt = -5;
+    // favouriteInt will have max of 256 bits (1byte = 8bits)
+    // 256/8 = 32
 
     // string
     string favouriteNumberInText = "five";
