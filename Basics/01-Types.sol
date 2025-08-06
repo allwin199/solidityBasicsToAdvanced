@@ -38,6 +38,21 @@ contract SimpleStorage {
     // Bytes can be allocated in size (up to bytes32). However, bytes and bytes32 represent distinct data types.
 
     // Strings are internally represented as dynamic byte arrays (bytes type) and designed specifically for working with text. For this reason, a string can easily be converted into bytes.
+
+    bool: The default value is false.
+
+    // uint: The default value is 0.
+    
+    // int256: The default value is 0.
+    
+    // string: The default value is an empty string "".
+    
+    // address: The default value is 0x0000000000000000000000000000000000000000 (or simply address(0)).
+    
+    // bytes: The default value is an empty byte array "".
+    
+    // bytes32: The default value is 0x0000000000000000000000000000000000000000000000000000000000000000.
+
 }
 
 
